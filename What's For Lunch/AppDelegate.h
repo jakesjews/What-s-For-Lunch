@@ -1,9 +1,9 @@
 //
 //  AppDelegate.h
-//  What's For Lunch
+//  I'm Hungry
 //
-//  Created by Jacob Jewell on 2/26/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Jacob Jewell on 12/30/11.
+//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
