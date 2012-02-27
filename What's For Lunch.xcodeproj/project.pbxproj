@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B382F8AF14FB0BEC00B5E55A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B382F8AE14FB0BEC00B5E55A /* UIKit.framework */; };
+		B382F8B114FB0BEC00B5E55A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B382F8B014FB0BEC00B5E55A /* Foundation.framework */; };
+		B382F8B314FB0BEC00B5E55A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B382F8B214FB0BEC00B5E55A /* CoreGraphics.framework */; };
+		B382F8B914FB0BEC00B5E55A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B382F8B714FB0BEC00B5E55A /* InfoPlist.strings */; };
+		B382F8BB14FB0BEC00B5E55A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B382F8BA14FB0BEC00B5E55A /* main.m */; };
+		B382F8BF14FB0BEC00B5E55A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B382F8BE14FB0BEC00B5E55A /* AppDelegate.m */; };
+		B382F8C214FB0BED00B5E55A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B382F8C114FB0BED00B5E55A /* ViewController.m */; };
+		B382F8C514FB0BED00B5E55A /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B382F8C314FB0BED00B5E55A /* ViewController_iPhone.xib */; };
+		B382F8C814FB0BED00B5E55A /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B382F8C614FB0BED00B5E55A /* ViewController_iPad.xib */; };
+		B382F8D014FB0BED00B5E55A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B382F8CF14FB0BED00B5E55A /* SenTestingKit.framework */; };
+		B382F8D114FB0BED00B5E55A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B382F8AE14FB0BEC00B5E55A /* UIKit.framework */; };
+		B382F8D214FB0BED00B5E55A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B382F8B014FB0BEC00B5E55A /* Foundation.framework */; };
+		B382F8DA14FB0BED00B5E55A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B382F8D814FB0BED00B5E55A /* InfoPlist.strings */; };
+		B382F8DD14FB0BED00B5E55A /* What_s_For_LunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B382F8DC14FB0BED00B5E55A /* What_s_For_LunchTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B382F8D314FB0BED00B5E55A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B382F8A114FB0BEC00B5E55A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B382F8A914FB0BEC00B5E55A;
+			remoteInfo = "What's For Lunch";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B382F8AA14FB0BEC00B5E55A /* What's For Lunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What's For Lunch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B382F8AE14FB0BEC00B5E55A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B382F8B014FB0BEC00B5E55A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B382F8B214FB0BEC00B5E55A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B382F8B614FB0BEC00B5E55A /* What's For Lunch-Info.plist */ = {isa = PBXFileReference; path = "What's For Lunch-Info.plist"; sourceTree = "<group>"; };
+		B382F8B814FB0BEC00B5E55A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B382F8BA14FB0BEC00B5E55A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B382F8BC14FB0BEC00B5E55A /* What's For Lunch-Prefix.pch */ = {isa = PBXFileReference; path = "What's For Lunch-Prefix.pch"; sourceTree = "<group>"; };
+		B382F8BD14FB0BEC00B5E55A /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		B382F8BE14FB0BEC00B5E55A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B382F8C014FB0BEC00B5E55A /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		B382F8C114FB0BED00B5E55A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B382F8C414FB0BED00B5E55A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		B382F8C714FB0BED00B5E55A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		B382F8CE14FB0BED00B5E55A /* What's For LunchTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "What's For LunchTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B382F8CF14FB0BED00B5E55A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		B382F8D714FB0BED00B5E55A /* What's For LunchTests-Info.plist */ = {isa = PBXFileReference; path = "What's For LunchTests-Info.plist"; sourceTree = "<group>"; };
+		B382F8D914FB0BED00B5E55A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B382F8DB14FB0BED00B5E55A /* What_s_For_LunchTests.h */ = {isa = PBXFileReference; path = What_s_For_LunchTests.h; sourceTree = "<group>"; };
+		B382F8DC14FB0BED00B5E55A /* What_s_For_LunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = What_s_For_LunchTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B382F8A714FB0BEC00B5E55A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B382F8AF14FB0BEC00B5E55A /* UIKit.framework in Frameworks */,
+				B382F8B114FB0BEC00B5E55A /* Foundation.framework in Frameworks */,
+				B382F8B314FB0BEC00B5E55A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B382F8CA14FB0BED00B5E55A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B382F8D014FB0BED00B5E55A /* SenTestingKit.framework in Frameworks */,
+				B382F8D114FB0BED00B5E55A /* UIKit.framework in Frameworks */,
+				B382F8D214FB0BED00B5E55A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B382F89F14FB0BEC00B5E55A = {
+			isa = PBXGroup;
+			children = (
+				B382F8B414FB0BEC00B5E55A /* What's For Lunch */,
+				B382F8D514FB0BED00B5E55A /* What's For LunchTests */,
+				B382F8AD14FB0BEC00B5E55A /* Frameworks */,
+				B382F8AB14FB0BEC00B5E55A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B382F8AB14FB0BEC00B5E55A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B382F8AA14FB0BEC00B5E55A /* What's For Lunch.app */,
+				B382F8CE14FB0BED00B5E55A /* What's For LunchTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B382F8AD14FB0BEC00B5E55A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B382F8AE14FB0BEC00B5E55A /* UIKit.framework */,
+				B382F8B014FB0BEC00B5E55A /* Foundation.framework */,
+				B382F8B214FB0BEC00B5E55A /* CoreGraphics.framework */,
+				B382F8CF14FB0BED00B5E55A /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B382F8B414FB0BEC00B5E55A /* What's For Lunch */ = {
+			isa = PBXGroup;
+			children = (
+				B382F8BD14FB0BEC00B5E55A /* AppDelegate.h */,
+				B382F8BE14FB0BEC00B5E55A /* AppDelegate.m */,
+				B382F8C014FB0BEC00B5E55A /* ViewController.h */,
+				B382F8C114FB0BED00B5E55A /* ViewController.m */,
+				B382F8C314FB0BED00B5E55A /* ViewController_iPhone.xib */,
+				B382F8C614FB0BED00B5E55A /* ViewController_iPad.xib */,
+				B382F8B514FB0BEC00B5E55A /* Supporting Files */,
+			);
+			path = "What's For Lunch";
+			sourceTree = "<group>";
+		};
+		B382F8B514FB0BEC00B5E55A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B382F8B614FB0BEC00B5E55A /* What's For Lunch-Info.plist */,
+				B382F8B714FB0BEC00B5E55A /* InfoPlist.strings */,
+				B382F8BA14FB0BEC00B5E55A /* main.m */,
+				B382F8BC14FB0BEC00B5E55A /* What's For Lunch-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B382F8D514FB0BED00B5E55A /* What's For LunchTests */ = {
+			isa = PBXGroup;
+			children = (
+				B382F8DB14FB0BED00B5E55A /* What_s_For_LunchTests.h */,
+				B382F8DC14FB0BED00B5E55A /* What_s_For_LunchTests.m */,
+				B382F8D614FB0BED00B5E55A /* Supporting Files */,
+			);
+			path = "What's For LunchTests";
+			sourceTree = "<group>";
+		};
+		B382F8D614FB0BED00B5E55A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B382F8D714FB0BED00B5E55A /* What's For LunchTests-Info.plist */,
+				B382F8D814FB0BED00B5E55A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B382F8A914FB0BEC00B5E55A /* What's For Lunch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B382F8E014FB0BED00B5E55A /* Build configuration list for PBXNativeTarget "What's For Lunch" */;
+			buildPhases = (
+				B382F8A614FB0BEC00B5E55A /* Sources */,
+				B382F8A714FB0BEC00B5E55A /* Frameworks */,
+				B382F8A814FB0BEC00B5E55A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "What's For Lunch";
+			productName = "What's For Lunch";
+			productReference = B382F8AA14FB0BEC00B5E55A /* What's For Lunch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B382F8CD14FB0BED00B5E55A /* What's For LunchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B382F8E314FB0BED00B5E55A /* Build configuration list for PBXNativeTarget "What's For LunchTests" */;
+			buildPhases = (
+				B382F8C914FB0BED00B5E55A /* Sources */,
+				B382F8CA14FB0BED00B5E55A /* Frameworks */,
+				B382F8CB14FB0BED00B5E55A /* Resources */,
+				B382F8CC14FB0BED00B5E55A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B382F8D414FB0BED00B5E55A /* PBXTargetDependency */,
+			);
+			name = "What's For LunchTests";
+			productName = "What's For LunchTests";
+			productReference = B382F8CE14FB0BED00B5E55A /* What's For LunchTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B382F8A114FB0BEC00B5E55A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = B382F8A414FB0BEC00B5E55A /* Build configuration list for PBXProject "What's For Lunch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B382F89F14FB0BEC00B5E55A;
+			productRefGroup = B382F8AB14FB0BEC00B5E55A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B382F8A914FB0BEC00B5E55A /* What's For Lunch */,
+				B382F8CD14FB0BED00B5E55A /* What's For LunchTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B382F8A814FB0BEC00B5E55A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B382F8B914FB0BEC00B5E55A /* InfoPlist.strings in Resources */,
+				B382F8C514FB0BED00B5E55A /* ViewController_iPhone.xib in Resources */,
+				B382F8C814FB0BED00B5E55A /* ViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B382F8CB14FB0BED00B5E55A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B382F8DA14FB0BED00B5E55A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B382F8CC14FB0BED00B5E55A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B382F8A614FB0BEC00B5E55A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B382F8BB14FB0BEC00B5E55A /* main.m in Sources */,
+				B382F8BF14FB0BEC00B5E55A /* AppDelegate.m in Sources */,
+				B382F8C214FB0BED00B5E55A /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B382F8C914FB0BED00B5E55A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B382F8DD14FB0BED00B5E55A /* What_s_For_LunchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B382F8D414FB0BED00B5E55A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B382F8A914FB0BEC00B5E55A /* What's For Lunch */;
+			targetProxy = B382F8D314FB0BED00B5E55A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B382F8B714FB0BEC00B5E55A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B382F8B814FB0BEC00B5E55A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B382F8C314FB0BED00B5E55A /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B382F8C414FB0BED00B5E55A /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		B382F8C614FB0BED00B5E55A /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B382F8C714FB0BED00B5E55A /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		B382F8D814FB0BED00B5E55A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B382F8D914FB0BED00B5E55A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B382F8DE14FB0BED00B5E55A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B382F8DF14FB0BED00B5E55A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B382F8E114FB0BED00B5E55A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "What's For Lunch/What's For Lunch-Prefix.pch";
+				INFOPLIST_FILE = "What's For Lunch/What's For Lunch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B382F8E214FB0BED00B5E55A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "What's For Lunch/What's For Lunch-Prefix.pch";
+				INFOPLIST_FILE = "What's For Lunch/What's For Lunch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B382F8E414FB0BED00B5E55A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/What's For Lunch.app/What's For Lunch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "What's For Lunch/What's For Lunch-Prefix.pch";
+				INFOPLIST_FILE = "What's For LunchTests/What's For LunchTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		B382F8E514FB0BED00B5E55A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/What's For Lunch.app/What's For Lunch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "What's For Lunch/What's For Lunch-Prefix.pch";
+				INFOPLIST_FILE = "What's For LunchTests/What's For LunchTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B382F8A414FB0BEC00B5E55A /* Build configuration list for PBXProject "What's For Lunch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B382F8DE14FB0BED00B5E55A /* Debug */,
+				B382F8DF14FB0BED00B5E55A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B382F8E014FB0BED00B5E55A /* Build configuration list for PBXNativeTarget "What's For Lunch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B382F8E114FB0BED00B5E55A /* Debug */,
+				B382F8E214FB0BED00B5E55A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B382F8E314FB0BED00B5E55A /* Build configuration list for PBXNativeTarget "What's For LunchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B382F8E414FB0BED00B5E55A /* Debug */,
+				B382F8E514FB0BED00B5E55A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B382F8A114FB0BEC00B5E55A /* Project object */;
+}
