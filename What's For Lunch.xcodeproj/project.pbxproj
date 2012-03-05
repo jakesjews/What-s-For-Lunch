@@ -522,8 +522,8 @@
 		B382F8E114FB0BED00B5E55A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: JJ Company Jewell (EL3M586PQ3)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: JJ Company Jewell (EL3M586PQ3)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/OAuthConsumer-gxfmnhmamljpwjbijyrilcjsfeda/Build/Products/Release\"",
@@ -532,8 +532,6 @@
 				GCC_PREFIX_HEADER = "What's For Lunch/What's For Lunch-Prefix.pch";
 				INFOPLIST_FILE = "What's For Lunch/What's For Lunch-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "E3372410-0789-4E98-A4DF-9F055CF02A49";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E3372410-0789-4E98-A4DF-9F055CF02A49";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -541,8 +539,8 @@
 		B382F8E214FB0BED00B5E55A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/OAuthConsumer-gxfmnhmamljpwjbijyrilcjsfeda/Build/Products/Release\"",
@@ -551,8 +549,6 @@
 				GCC_PREFIX_HEADER = "What's For Lunch/What's For Lunch-Prefix.pch";
 				INFOPLIST_FILE = "What's For Lunch/What's For Lunch-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
