@@ -522,8 +522,8 @@
 		B382F8E114FB0BED00B5E55A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: JJ Company Jewell";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: JJ Company Jewell";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/OAuthConsumer-gxfmnhmamljpwjbijyrilcjsfeda/Build/Products/Release\"",
@@ -531,7 +531,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "What's For Lunch/What's For Lunch-Prefix.pch";
 				INFOPLIST_FILE = "What's For Lunch/What's For Lunch-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6DB6C384-F40A-430A-8C50-C827DAA492EB";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6DB6C384-F40A-430A-8C50-C827DAA492EB";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -539,8 +542,8 @@
 		B382F8E214FB0BED00B5E55A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: JJ Company Jewell";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: JJ Company Jewell";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/OAuthConsumer-gxfmnhmamljpwjbijyrilcjsfeda/Build/Products/Release\"",
@@ -548,7 +551,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "What's For Lunch/What's For Lunch-Prefix.pch";
 				INFOPLIST_FILE = "What's For Lunch/What's For Lunch-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6DB6C384-F40A-430A-8C50-C827DAA492EB";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6DB6C384-F40A-430A-8C50-C827DAA492EB";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

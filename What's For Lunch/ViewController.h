@@ -17,11 +17,11 @@
 
     //iPhone
     UIPickerView *restaurantPicker;
-    __weak IBOutlet UITextView *lblAddress;
-    __weak IBOutlet UITextView *lblUrl;
+    IBOutlet UITextView *lblAddress;
+    IBOutlet UITextView *lblUrl;
 
     //iPad
-    __weak IBOutlet UIWebView *wvRestaurant;
+    IBOutlet UIWebView *wvRestaurant;
    
 }
 
