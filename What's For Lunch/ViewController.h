@@ -32,5 +32,6 @@
 
 - (NSString*) getLatString;
 - (NSString*) getLngString;
+- (void) fillSelectedRestaurant;
 
 @end

@@ -21,5 +21,6 @@
 @property (strong) NSDictionary* restaurants;
 
 - (id)init: (NSString*) latString: (NSString*) lngString;
+- (void) getRestaurants;
 
 @end
