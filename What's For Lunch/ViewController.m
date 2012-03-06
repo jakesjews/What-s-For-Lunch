@@ -8,6 +8,32 @@
 
 #import "ViewController.h"
 
+// Declare private methods
+@interface ViewController (PrivateMethods)
+
+    // Fills in the details for the restaurant selected in the picker
+    - (void) fillSelectedRestaurant;
+
+    // Starts the location manager with an accuracy of 1 kilometer
+    - (void) startLocationManager;
+
+    // Whether the app is running in an iPad or not
+    - (Boolean) isIpad;
+
+    // Selects a random restaurant in the picker
+    - (void) displayRandomRestaurant;
+
+    // Converts the current latitude to a string for the Yelp api request
+    - (NSString*) getLatString;
+
+    // Converts the current longitude to a string for the Yelp api request    
+    - (NSString*) getLngString;
+
+    // Loads a Restaurants object using the current latitude and longitude
+    - (void)loadData;
+
+@end
+
 @implementation ViewController
 
 @synthesize locationManager, restaurantPicker;
@@ -26,7 +52,11 @@
 
 - (void)displayRandomRestaurant
 {
+    // Use arc4Random because it does not require a seed and set it to a max value of the number
+    // of restaurants in the picker
     int rand = arc4random() % [[[restaurants restaurants] valueForKeyPath: @"businesses"] count];
+    
+    // Select the restaurant index matching the previously created random number
     [restaurantPicker selectRow:rand inComponent:0 animated:YES];
     [restaurantPicker reloadComponent:0];
     [self fillSelectedRestaurant];
@@ -34,17 +64,23 @@
 
 - (void)fillSelectedRestaurant
 {
+    // Get a reference to the selected restaurant
     NSInteger row = [restaurantPicker selectedRowInComponent:0];
     id restaurant = [[[restaurants restaurants] valueForKeyPath: @"businesses"] objectAtIndex:row];
     
+    // Get the url for the restaurant that was returned by the Yelp API
     NSString* urlString = [restaurant valueForKeyPath: @"url"];
     
+    // If the device is an iPad navigate the web view to the restaurant's Yelp URL
     if ([self isIpad]) {
         
         NSURLRequest *requestObj = [NSURLRequest requestWithURL:
                                     [NSURL URLWithString: urlString]];
         [wvRestaurant loadRequest:requestObj];
-        
+    
+    /* If the device is an iphone fill in the web site text area with the Yelp URL and fill in the 
+       address text area with the restaurant's address
+     */
     } else {
         
         NSString* address = [[restaurant valueForKeyPath: @"location.display_address"] componentsJoinedByString: @" "];
@@ -78,8 +114,10 @@
 
 - (void)loadData
 {
+    // Create a restaurants object with the string values of the current latitude and longitude
     restaurants = [[Restaurants alloc] init: [self getLatString]: [self getLngString]];
     
+    // If more than one restaurant was returned by yelp then select a random restaurant in the picker
     if ([[restaurants restaurants] count] > 0) {
         [self displayRandomRestaurant];
     }
@@ -103,12 +141,18 @@
 
 - (IBAction)btnGetRestaurant:(id)sender 
 { 
+    // If there are no restaurants in the pickerview try to load fresh data
     if([[restaurants restaurants] count] == 0)
     {
         [self loadData];
     }
-        
-    [self displayRandomRestaurant];  
+    
+    // If there is any restaurant data loaded then select a random restaurant in the picker
+    if([[restaurants restaurants] count] > 0) 
+    {
+        [self displayRandomRestaurant];    
+    }
+      
 }
 
 - (void) motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
@@ -120,12 +164,14 @@
     [super viewDidLoad];
     [self startLocationManager];
     
+    // Add snazzy rounded corners to the iPhone text areas
     if ( ![self isIpad] ) 
     {
         lblAddress.layer.cornerRadius = 10;
         lblUrl.layer.cornerRadius = 10;
     }
     
+    // Add a notification for when the app is loaded from the background
     [[NSNotificationCenter defaultCenter] addObserver:self 
                                           selector:@selector(becomeActive:)
                                           name:UIApplicationDidBecomeActiveNotification

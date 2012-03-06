@@ -11,7 +11,8 @@
 #import "Restaurants.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>  {
+@interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>  
+{
     CLLocationManager* locationManager;
     Restaurants *restaurants;
 
@@ -28,10 +29,7 @@
 @property (strong) CLLocationManager* locationManager;
 @property (strong) IBOutlet UIPickerView *restaurantPicker;
 
+// Selects a random restaurant in the picker
 - (IBAction) btnGetRestaurant:(id)sender;
-
-- (NSString*) getLatString;
-- (NSString*) getLngString;
-- (void) fillSelectedRestaurant;
 
 @end
