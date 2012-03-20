@@ -43,6 +43,7 @@
 		B382FA8214FB0E2600B5E55A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B382FA7F14FB0E2600B5E55A /* Icon@2x.png */; };
 		B382FA8314FB0E2600B5E55A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B382FA8014FB0E2600B5E55A /* Icon.png */; };
 		B382FA8514FB0EC300B5E55A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B382FA8414FB0EC300B5E55A /* CoreLocation.framework */; };
+		B3AF17731518CCC4006FD16E /* iPadIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3AF17721518CCC4006FD16E /* iPadIcon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		B382FA7F14FB0E2600B5E55A /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		B382FA8014FB0E2600B5E55A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		B382FA8414FB0EC300B5E55A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B3AF17721518CCC4006FD16E /* iPadIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadIcon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 			children = (
 				B3716B8A14FB36A300005AA2 /* lib */,
 				B382FA7E14FB0E2600B5E55A /* Icon-72.png */,
+				B3AF17721518CCC4006FD16E /* iPadIcon@2x.png */,
 				B382FA7F14FB0E2600B5E55A /* Icon@2x.png */,
 				B382FA8014FB0E2600B5E55A /* Icon.png */,
 				B382F8B414FB0BEC00B5E55A /* What's For Lunch */,
@@ -370,6 +373,7 @@
 				B382FA8114FB0E2600B5E55A /* Icon-72.png in Resources */,
 				B382FA8214FB0E2600B5E55A /* Icon@2x.png in Resources */,
 				B382FA8314FB0E2600B5E55A /* Icon.png in Resources */,
+				B3AF17731518CCC4006FD16E /* iPadIcon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +526,10 @@
 		B382F8E114FB0BED00B5E55A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv6,
+				);
 				CODE_SIGN_IDENTITY = "iPhone Distribution: JJ Company Jewell";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: JJ Company Jewell";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -542,6 +550,10 @@
 		B382F8E214FB0BED00B5E55A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv6,
+				);
 				CODE_SIGN_IDENTITY = "iPhone Distribution: JJ Company Jewell";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: JJ Company Jewell";
 				FRAMEWORK_SEARCH_PATHS = (
