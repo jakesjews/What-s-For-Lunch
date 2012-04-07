@@ -86,6 +86,7 @@
         NSString* address = [[restaurant valueForKeyPath: @"location.display_address"] componentsJoinedByString: @" "];
         
         [lblAddress setText: address];
+        lblAddress.dataDetectorTypes = UIDataDetectorTypeAddress;
         [lblUrl setText: urlString];
     }
 }
