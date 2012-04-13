@@ -14,6 +14,9 @@
     NSString* lat;
     NSString* lng;
     NSDictionary* restaurants;
+    
+    @private
+    NSMutableData* _data;
 }
 
 @property (strong) NSString* lat;
