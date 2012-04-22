@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3527B3E1544B2B200DF13B5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3527B3D1544B2B200DF13B5 /* MessageUI.framework */; };
 		B3716BB214FB36A300005AA2 /* NSMutableURLRequest+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = B3716B8E14FB36A300005AA2 /* NSMutableURLRequest+Parameters.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B3716BB314FB36A300005AA2 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = B3716B9014FB36A300005AA2 /* NSString+URLEncoding.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B3716BB414FB36A300005AA2 /* NSURL+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = B3716B9214FB36A300005AA2 /* NSURL+Base.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -80,6 +81,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B3527B3D1544B2B200DF13B5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = ../../../../Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		B3716B8D14FB36A300005AA2 /* NSMutableURLRequest+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Parameters.h"; sourceTree = "<group>"; };
 		B3716B8E14FB36A300005AA2 /* NSMutableURLRequest+Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+Parameters.m"; sourceTree = "<group>"; };
 		B3716B8F14FB36A300005AA2 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3527B3E1544B2B200DF13B5 /* MessageUI.framework in Frameworks */,
 				B382FA8514FB0EC300B5E55A /* CoreLocation.framework in Frameworks */,
 				B382F8AF14FB0BEC00B5E55A /* UIKit.framework in Frameworks */,
 				B382F8B114FB0BEC00B5E55A /* Foundation.framework in Frameworks */,
@@ -304,6 +307,7 @@
 		B382F8AD14FB0BEC00B5E55A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B3527B3D1544B2B200DF13B5 /* MessageUI.framework */,
 				B382FA8414FB0EC300B5E55A /* CoreLocation.framework */,
 				B382F8AE14FB0BEC00B5E55A /* UIKit.framework */,
 				B382F8B014FB0BEC00B5E55A /* Foundation.framework */,
@@ -460,9 +464,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B382F8E014FB0BED00B5E55A /* Build configuration list for PBXNativeTarget "What's For Lunch" */;
 			buildPhases = (
+				B382F8A814FB0BEC00B5E55A /* Resources */,
 				B382F8A614FB0BEC00B5E55A /* Sources */,
 				B382F8A714FB0BEC00B5E55A /* Frameworks */,
-				B382F8A814FB0BEC00B5E55A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -714,20 +718,14 @@
 		B382F8E114FB0BED00B5E55A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv7,
-					armv6,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/OAuthConsumer-gxfmnhmamljpwjbijyrilcjsfeda/Build/Products/Release\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "What's For Lunch/What's For Lunch-Prefix.pch";
 				INFOPLIST_FILE = "What's For Lunch/What's For Lunch-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -738,20 +736,14 @@
 		B382F8E214FB0BED00B5E55A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv7,
-					armv6,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/OAuthConsumer-gxfmnhmamljpwjbijyrilcjsfeda/Build/Products/Release\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "What's For Lunch/What's For Lunch-Prefix.pch";
 				INFOPLIST_FILE = "What's For Lunch/What's For Lunch-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
