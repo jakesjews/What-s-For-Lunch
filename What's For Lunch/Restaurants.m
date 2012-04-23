@@ -116,6 +116,10 @@ static NSString* const TOKEN_SECRET = @"jqXa9QivTJF1qCoTZ8RpfwpCvhs";
     if([settings boolForKey:@"delis_pref"]) {
         [categories addObject: @"delis"];
     }
+    
+    if([settings boolForKey:@"bars_pref"]) {
+        [categories addObject: @"bars"];
+    }
 
     if ([categories count] == 0) {
         [categories addObject: @"restaurants"];
