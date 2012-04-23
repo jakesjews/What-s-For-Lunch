@@ -52,7 +52,7 @@
 			<key>Key</key>
 			<string>hotdogs</string>
 			<key>DefaultValue</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Type</key>
