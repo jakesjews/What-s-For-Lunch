@@ -18,17 +18,19 @@
 			<key>Key</key>
 			<string>distance_pref</string>
 			<key>DefaultValue</key>
-			<string>25</string>
+			<string>40233</string>
 			<key>Values</key>
 			<array>
-				<string>5</string>
-				<string>10</string>
-				<string>15</string>
-				<string>20</string>
-				<string>25</string>
+				<string>1609</string>
+				<string>8047</string>
+				<string>16093</string>
+				<string>24140</string>
+				<string>32187</string>
+				<string>40233</string>
 			</array>
 			<key>Titles</key>
 			<array>
+				<string>1</string>
 				<string>5</string>
 				<string>10</string>
 				<string>15</string>

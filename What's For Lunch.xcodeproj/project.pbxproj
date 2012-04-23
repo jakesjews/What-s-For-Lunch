@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B3527B3E1544B2B200DF13B5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3527B3D1544B2B200DF13B5 /* MessageUI.framework */; };
+		B34EF3F81544DB4600E53E0E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B34EF3F71544DB4600E53E0E /* MessageUI.framework */; };
 		B3716BB214FB36A300005AA2 /* NSMutableURLRequest+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = B3716B8E14FB36A300005AA2 /* NSMutableURLRequest+Parameters.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B3716BB314FB36A300005AA2 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = B3716B9014FB36A300005AA2 /* NSString+URLEncoding.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B3716BB414FB36A300005AA2 /* NSURL+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = B3716B9214FB36A300005AA2 /* NSURL+Base.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -45,8 +45,6 @@
 		B382FA8314FB0E2600B5E55A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B382FA8014FB0E2600B5E55A /* Icon.png */; };
 		B382FA8514FB0EC300B5E55A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B382FA8414FB0EC300B5E55A /* CoreLocation.framework */; };
 		B3AF17731518CCC4006FD16E /* iPadIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3AF17721518CCC4006FD16E /* iPadIcon@2x.png */; };
-		B3AF17731518CCC4006FD171 /* Root.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3AF17731518CCC4006FD170 /* Root.plist */; };
-		B3AF17731518CCC4006FD175 /* Root.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3AF17731518CCC4006FD174 /* Root.strings */; };
 		B3AF17731518CCC4006FD17A /* IASKAppSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AF17731518CCC4006FD179 /* IASKAppSettingsViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B3AF17731518CCC4006FD17D /* IASKAppSettingsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AF17731518CCC4006FD17C /* IASKAppSettingsWebViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B3AF17731518CCC4006FD180 /* IASKSpecifierValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AF17731518CCC4006FD17F /* IASKSpecifierValuesViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -68,6 +66,7 @@
 		B3AF17731518CCC4006FD1B0 /* IASKPSTextFieldSpecifierViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3AF17731518CCC4006FD1AF /* IASKPSTextFieldSpecifierViewCell.xib */; };
 		B3AF17731518CCC4006FD1B2 /* IASKPSToggleSwitchSpecifierViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3AF17731518CCC4006FD1B1 /* IASKPSToggleSwitchSpecifierViewCell.xib */; };
 		B3AF17731518CCC4006FD1B4 /* IASKSpecifierValuesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3AF17731518CCC4006FD1B3 /* IASKSpecifierValuesView.xib */; };
+		B3FE19A91544DD4000122BE3 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B3FE19A81544DD4000122BE3 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +80,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B3527B3D1544B2B200DF13B5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = ../../../../Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		B34EF3F71544DB4600E53E0E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		B3716B8D14FB36A300005AA2 /* NSMutableURLRequest+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Parameters.h"; sourceTree = "<group>"; };
 		B3716B8E14FB36A300005AA2 /* NSMutableURLRequest+Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+Parameters.m"; sourceTree = "<group>"; };
 		B3716B8F14FB36A300005AA2 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
@@ -145,8 +144,6 @@
 		B382FA8014FB0E2600B5E55A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		B382FA8414FB0EC300B5E55A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B3AF17721518CCC4006FD16E /* iPadIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPadIcon@2x.png"; sourceTree = "<group>"; };
-		B3AF17731518CCC4006FD170 /* Root.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Root.plist; sourceTree = "<group>"; };
-		B3AF17731518CCC4006FD173 /* Root.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Root.strings; sourceTree = "<group>"; };
 		B3AF17731518CCC4006FD178 /* IASKAppSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKAppSettingsViewController.h; sourceTree = "<group>"; };
 		B3AF17731518CCC4006FD179 /* IASKAppSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKAppSettingsViewController.m; sourceTree = "<group>"; };
 		B3AF17731518CCC4006FD17B /* IASKAppSettingsWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKAppSettingsWebViewController.h; sourceTree = "<group>"; };
@@ -184,6 +181,7 @@
 		B3AF17731518CCC4006FD1AF /* IASKPSTextFieldSpecifierViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IASKPSTextFieldSpecifierViewCell.xib; sourceTree = "<group>"; };
 		B3AF17731518CCC4006FD1B1 /* IASKPSToggleSwitchSpecifierViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IASKPSToggleSwitchSpecifierViewCell.xib; sourceTree = "<group>"; };
 		B3AF17731518CCC4006FD1B3 /* IASKSpecifierValuesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IASKSpecifierValuesView.xib; sourceTree = "<group>"; };
+		B3FE19A81544DD4000122BE3 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,7 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3527B3E1544B2B200DF13B5 /* MessageUI.framework in Frameworks */,
+				B34EF3F81544DB4600E53E0E /* MessageUI.framework in Frameworks */,
 				B382FA8514FB0EC300B5E55A /* CoreLocation.framework in Frameworks */,
 				B382F8AF14FB0BEC00B5E55A /* UIKit.framework in Frameworks */,
 				B382F8B114FB0BEC00B5E55A /* Foundation.framework in Frameworks */,
@@ -307,7 +305,7 @@
 		B382F8AD14FB0BEC00B5E55A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B3527B3D1544B2B200DF13B5 /* MessageUI.framework */,
+				B34EF3F71544DB4600E53E0E /* MessageUI.framework */,
 				B382FA8414FB0EC300B5E55A /* CoreLocation.framework */,
 				B382F8AE14FB0BEC00B5E55A /* UIKit.framework */,
 				B382F8B014FB0BEC00B5E55A /* Foundation.framework */,
@@ -336,11 +334,11 @@
 		B382F8B514FB0BEC00B5E55A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B3AF17731518CCC4006FD16F /* Settings.bundle */,
 				B382F8B614FB0BEC00B5E55A /* What's For Lunch-Info.plist */,
 				B382F8B714FB0BEC00B5E55A /* InfoPlist.strings */,
 				B382F8BA14FB0BEC00B5E55A /* main.m */,
 				B382F8BC14FB0BEC00B5E55A /* What's For Lunch-Prefix.pch */,
+				B3FE19A81544DD4000122BE3 /* Settings.bundle */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -362,23 +360,6 @@
 				B382F8D814FB0BED00B5E55A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B3AF17731518CCC4006FD16F /* Settings.bundle */ = {
-			isa = PBXGroup;
-			children = (
-				B3AF17731518CCC4006FD170 /* Root.plist */,
-				B3AF17731518CCC4006FD172 /* en.lproj */,
-			);
-			path = Settings.bundle;
-			sourceTree = "<group>";
-		};
-		B3AF17731518CCC4006FD172 /* en.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				B3AF17731518CCC4006FD174 /* Root.strings */,
-			);
-			path = en.lproj;
 			sourceTree = "<group>";
 		};
 		B3AF17731518CCC4006FD176 /* InAppSettingsKit */ = {
@@ -535,14 +516,13 @@
 				B382FA8214FB0E2600B5E55A /* Icon@2x.png in Resources */,
 				B382FA8314FB0E2600B5E55A /* Icon.png in Resources */,
 				B3AF17731518CCC4006FD16E /* iPadIcon@2x.png in Resources */,
-				B3AF17731518CCC4006FD171 /* Root.plist in Resources */,
-				B3AF17731518CCC4006FD175 /* Root.strings in Resources */,
 				B3AF17731518CCC4006FD1AA /* IASKAppSettingsView.xib in Resources */,
 				B3AF17731518CCC4006FD1AC /* IASKAppSettingsWebView.xib in Resources */,
 				B3AF17731518CCC4006FD1AE /* IASKPSSliderSpecifierViewCell.xib in Resources */,
 				B3AF17731518CCC4006FD1B0 /* IASKPSTextFieldSpecifierViewCell.xib in Resources */,
 				B3AF17731518CCC4006FD1B2 /* IASKPSToggleSwitchSpecifierViewCell.xib in Resources */,
 				B3AF17731518CCC4006FD1B4 /* IASKSpecifierValuesView.xib in Resources */,
+				B3FE19A91544DD4000122BE3 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,14 +629,6 @@
 				B382F8D914FB0BED00B5E55A /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		B3AF17731518CCC4006FD174 /* Root.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B3AF17731518CCC4006FD173 /* Root.strings */,
-			);
-			name = Root.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

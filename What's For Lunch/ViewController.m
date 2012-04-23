@@ -36,7 +36,7 @@
 
 @implementation ViewController
 
-@synthesize locationManager, restaurantPicker;
+@synthesize locationManager, restaurantPicker, appSettingsViewController;
 
 - (Boolean) isIpad
 {
@@ -91,18 +91,6 @@
     }
 }
 
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)thePickerView { 	
-    return 1;
-}
-
-- (NSInteger)pickerView:(UIPickerView *)thePickerView numberOfRowsInComponent:(NSInteger)component {
-    return [[[restaurants restaurants] valueForKeyPath: @"businesses"] count];
-}
-
-- (NSString *)pickerView:(UIPickerView *)thePickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return [[[restaurants restaurants] valueForKeyPath: @"businesses.name"] objectAtIndex:row];
-}
-
 - (NSString *)getLatString
 { 
     return [[NSNumber numberWithDouble:self.locationManager.location.coordinate.latitude] stringValue];
@@ -118,13 +106,80 @@
     // Create a restaurants object with the string values of the current latitude and longitude
     restaurants = [[Restaurants alloc] init: [self getLatString]: [self getLngString]];
     
+    int restaurantCount = [[[restaurants restaurants] valueForKeyPath: @"businesses"] count];
+    
     // If more than one restaurant was returned by yelp then select a random restaurant in the picker
-    if ([[restaurants restaurants] count] > 0) {
+    if (restaurantCount > 0) {
         [self displayRandomRestaurant];
     }
 }
 
-- (void)becomeActive:(NSNotification *)notification 
+#pragma mark - Events
+
+- (IBAction)btnGetRestaurant:(id)sender {
+    // If there are no restaurants in the pickerview try to load fresh data
+    if([[restaurants restaurants] count] == 0)
+    {
+        [self loadData];
+    }
+
+    // If there is any restaurant data loaded then select a random restaurant in the picker
+    if([[restaurants restaurants] count] > 0)
+    {
+        [self displayRandomRestaurant];
+    }
+
+}
+
+- (IBAction)btnOpenSettings:(id)sender {
+    UINavigationController *aNavController = [[UINavigationController alloc] initWithRootViewController: self.appSettingsViewController];
+    self.appSettingsViewController.showDoneButton = YES;
+    [self presentModalViewController:aNavController animated:YES];
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    [self fillSelectedRestaurant];
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    [self displayRandomRestaurant];
+}
+
+- (void)settingsViewControllerDidEnd:(IASKAppSettingsViewController *)sender {
+
+    [self dismissModalViewControllerAnimated:YES];
+
+    [self loadData];
+
+}
+
+#pragma mark - InAppSettingsKit
+
+- (IASKAppSettingsViewController*)appSettingsViewController {
+    if (!appSettingsViewController) {
+        appSettingsViewController = [[IASKAppSettingsViewController alloc] initWithNibName:@"IASKAppSettingsView" bundle:nil];
+        appSettingsViewController.delegate = self;
+    }
+    return appSettingsViewController;
+}
+
+#pragma mark - PickerView
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)thePickerView {
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)thePickerView numberOfRowsInComponent:(NSInteger)component {
+    return [[[restaurants restaurants] valueForKeyPath: @"businesses"] count];
+}
+
+- (NSString *)pickerView:(UIPickerView *)thePickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    return [[[restaurants restaurants] valueForKeyPath: @"businesses.name"] objectAtIndex:row];
+}
+
+#pragma mark - View lifecycle
+
+- (void)becomeActive:(NSNotification *)notification
 {
     [self loadData];
 }
@@ -132,32 +187,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-}
-
-#pragma mark - View lifecycle
-
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    [self fillSelectedRestaurant];
-}
-
-- (IBAction)btnGetRestaurant:(id)sender 
-{ 
-    // If there are no restaurants in the pickerview try to load fresh data
-    if([[restaurants restaurants] count] == 0)
-    {
-        [self loadData];
-    }
-    
-    // If there is any restaurant data loaded then select a random restaurant in the picker
-    if([[restaurants restaurants] count] > 0) 
-    {
-        [self displayRandomRestaurant];    
-    }
-      
-}
-
-- (void) motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
-    [self displayRandomRestaurant];
 }
 
 - (void)viewDidLoad
