@@ -17,14 +17,15 @@
     CLLocationManager* locationManager;
     Restaurants *restaurants;
 
-    //iPhone
+    // iPhone
     UIPickerView *restaurantPicker;
     IBOutlet UITextView *lblAddress;
     IBOutlet UITextView *lblUrl;
 
-    //iPad
+    // iPad
     IBOutlet UIWebView *wvRestaurant;
 
+    // The view controller for the settings
     IASKAppSettingsViewController *appSettingsViewController;
    
 }
@@ -35,6 +36,7 @@
 
 // Selects a random restaurant in the picker
 - (IBAction) btnGetRestaurant:(id)sender;
+// Opens the settings view
 - (IBAction) btnOpenSettings:(id)sender;
 
 @end

@@ -74,58 +74,27 @@ static NSString* const TOKEN_SECRET = @"jqXa9QivTJF1qCoTZ8RpfwpCvhs";
 
 - (NSString*) getCategoryList
 {
-    NSMutableArray *categories = [[NSMutableArray alloc] init];
-    NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
+    
+    NSMutableArray *foodTypes = [NSMutableArray arrayWithObjects: 
+                         @"pizza", @"hotdogs", @"buffets",
+                          @"chinese", @"italian", @"mexican",
+                          @"mideastern", @"vegan", @"tradamerican",
+                          @"delis", @"bars", nil];
 
-    if([settings boolForKey:@"pizza_pref"]) {
-        [categories addObject: @"pizza"];
-    }
-
-    if([settings boolForKey:@"fastfood_pref"]) {
-        [categories addObject: @"hotdogs"];
-    }
-
-    if([settings boolForKey:@"buffets_pref"]) {
-        [categories addObject: @"buffets"];
-    }
-
-    if([settings boolForKey:@"chinese_pref"]) {
-        [categories addObject: @"chinese"];
-    }
-
-    if([settings boolForKey:@"italian_pref"]) {
-        [categories addObject: @"italian"];
-    }
-
-    if([settings boolForKey:@"mexican_pref"]) {
-        [categories addObject: @"mexican"];
-    }
-
-    if([settings boolForKey:@"middleeast_pref"]) {
-        [categories addObject: @"mideastern"];
-    }
-
-    if([settings boolForKey:@"vegan_pref"]) {
-        [categories addObject: @"vegan"];
-    }
-
-    if([settings boolForKey:@"american_pref"]) {
-        [categories addObject: @"tradamerican"];
-    }
-
-    if([settings boolForKey:@"delis_pref"]) {
-        [categories addObject: @"delis"];
+    for(int i = [foodTypes count] - 1; i > 0; i--) {
+        
+        if (!([[NSUserDefaults standardUserDefaults] boolForKey: [foodTypes objectAtIndex: i]]))
+        {
+            [foodTypes removeObjectAtIndex: i];
+        }
+        
     }
     
-    if([settings boolForKey:@"bars_pref"]) {
-        [categories addObject: @"bars"];
+    if ([foodTypes count] == 0) {
+        [foodTypes addObject: @"restaurants"];
     }
 
-    if ([categories count] == 0) {
-        [categories addObject: @"restaurants"];
-    }
-
-    return [categories componentsJoinedByString:@","];
+    return [foodTypes componentsJoinedByString:@","];
 }
 
 - (OAMutableURLRequest*) getOARequest

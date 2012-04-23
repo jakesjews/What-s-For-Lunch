@@ -26,6 +26,7 @@
         self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
     }
 
+    // Check if preferences have been set, if they haven't load defaults from settings.bundle
     int distance = [[NSUserDefaults standardUserDefaults] integerForKey:@"distance"];
 
     if(distance == 0) {
@@ -37,6 +38,7 @@
     return YES;
 }
 
+// This function was found and StackOverflow and allows loading default settings from the settings.bundle file
 - (void)registerDefaultsFromSettingsBundle {
 
     NSString *settingsBundle = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"bundle"];

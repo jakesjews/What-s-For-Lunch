@@ -117,18 +117,7 @@
 #pragma mark - Events
 
 - (IBAction)btnGetRestaurant:(id)sender {
-    // If there are no restaurants in the pickerview try to load fresh data
-    if([[restaurants restaurants] count] == 0)
-    {
-        [self loadData];
-    }
-
-    // If there is any restaurant data loaded then select a random restaurant in the picker
-    if([[restaurants restaurants] count] > 0)
-    {
-        [self displayRandomRestaurant];
-    }
-
+    [self loadData];
 }
 
 - (IBAction)btnOpenSettings:(id)sender {

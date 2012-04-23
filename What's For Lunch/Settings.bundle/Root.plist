@@ -50,7 +50,7 @@
 			<key>Title</key>
 			<string>Fast Food</string>
 			<key>Key</key>
-			<string>fastfood_pref</string>
+			<string>hotdogs</string>
 			<key>DefaultValue</key>
 			<true/>
 		</dict>
@@ -60,7 +60,7 @@
 			<key>Title</key>
 			<string>Buffets</string>
 			<key>Key</key>
-			<string>buffet_pref</string>
+			<string>buffets</string>
 			<key>DefaultValue</key>
 			<false/>
 		</dict>
@@ -70,7 +70,7 @@
 			<key>Title</key>
 			<string>Chinese</string>
 			<key>Key</key>
-			<string>chinese_pref</string>
+			<string>chinese</string>
 			<key>DefaultValue</key>
 			<false/>
 		</dict>
@@ -80,7 +80,7 @@
 			<key>Title</key>
 			<string>Italian</string>
 			<key>Key</key>
-			<string>italian_pref</string>
+			<string>italian</string>
 			<key>DefaultValue</key>
 			<false/>
 		</dict>
@@ -90,7 +90,7 @@
 			<key>Title</key>
 			<string>Mexican</string>
 			<key>Key</key>
-			<string>mexican_pref</string>
+			<string>mexican</string>
 			<key>DefaultValue</key>
 			<false/>
 		</dict>
@@ -100,7 +100,7 @@
 			<key>Title</key>
 			<string>Middle Eastern</string>
 			<key>Key</key>
-			<string>middleeast_pref</string>
+			<string>mideastern</string>
 			<key>DefaultValue</key>
 			<false/>
 		</dict>
@@ -110,7 +110,7 @@
 			<key>Title</key>
 			<string>Pizza</string>
 			<key>Key</key>
-			<string>pizza_pref</string>
+			<string>pizza</string>
 			<key>DefaultValue</key>
 			<false/>
 		</dict>
@@ -120,7 +120,7 @@
 			<key>Title</key>
 			<string>Vegan</string>
 			<key>Key</key>
-			<string>vegan_pref</string>
+			<string>vegan</string>
 			<key>DefaultValue</key>
 			<false/>
 		</dict>
@@ -130,7 +130,7 @@
 			<key>Title</key>
 			<string>American</string>
 			<key>Key</key>
-			<string>american_pref</string>
+			<string>tradeamerican</string>
 			<key>DefaultValue</key>
 			<false/>
 		</dict>
@@ -140,7 +140,7 @@
 			<key>Title</key>
 			<string>Delis</string>
 			<key>Key</key>
-			<string>deli_pref</string>
+			<string>delis</string>
 			<key>DefaultValue</key>
 			<false/>
 		</dict>
@@ -150,7 +150,7 @@
 			<key>Title</key>
 			<string>Bars</string>
 			<key>Key</key>
-			<string>bars_pref</string>
+			<string>bars</string>
 			<key>DefaultValue</key>
 			<false/>
 		</dict>
