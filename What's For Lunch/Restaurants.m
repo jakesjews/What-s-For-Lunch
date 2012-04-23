@@ -12,7 +12,7 @@
 @interface Restaurants (PrivateMethods)
 
     // Loads restaurant data from the Yelp api
-    - (void) getRestaurants;
+    - (void) getRestaurantList;
 
     /*  Creates a URL to make a search request to the yelp api
         The URL is in the format http://api.yelp.com/v2/search?radius_filter=40232&term=fast%20food&ll=10.0,10.0     
@@ -27,7 +27,7 @@
 
 @implementation Restaurants
 
-@synthesize lat, lng, restaurants;
+@synthesize lat, lng, restaurantList;
 
 // The base url used to construct a Yelp API request
 static NSString* const serviceURL = @"http://api.yelp.com/v2/search?";
@@ -49,7 +49,7 @@ static NSString* const TOKEN_SECRET = @"jqXa9QivTJF1qCoTZ8RpfwpCvhs";
     if (self) {
         lat = latString;
         lng = lngString;
-        [self getRestaurants];
+        [self getRestaurantList];
     }
     
     return self;
@@ -81,7 +81,7 @@ static NSString* const TOKEN_SECRET = @"jqXa9QivTJF1qCoTZ8RpfwpCvhs";
                           @"mideastern", @"vegan", @"tradamerican",
                           @"delis", @"bars", nil];
 
-    for(int i = [foodTypes count] - 1; i > 0; i--) {
+    for(int i = [foodTypes count] - 1; i >= 0; i--) {
         
         if (!([[NSUserDefaults standardUserDefaults] boolForKey: [foodTypes objectAtIndex: i]]))
         {
@@ -97,8 +97,7 @@ static NSString* const TOKEN_SECRET = @"jqXa9QivTJF1qCoTZ8RpfwpCvhs";
     return [foodTypes componentsJoinedByString:@","];
 }
 
-- (OAMutableURLRequest*) getOARequest
-{
+- (OAMutableURLRequest*) getOARequest {
     NSString *realm;
     OAConsumer *consumer = [[OAConsumer alloc] initWithKey: CONSUMER_KEY secret: CONSUMER_SECRET];
     OAToken *token = [[OAToken alloc] initWithKey: TOKEN secret: TOKEN_SECRET]; 
@@ -114,8 +113,7 @@ static NSString* const TOKEN_SECRET = @"jqXa9QivTJF1qCoTZ8RpfwpCvhs";
     return request;
 }
 
-- (void) getRestaurants
-{
+- (void) getRestaurantList {
     NSHTTPURLResponse* response;    
     NSError* error;
     
@@ -127,10 +125,14 @@ static NSString* const TOKEN_SECRET = @"jqXa9QivTJF1qCoTZ8RpfwpCvhs";
     // the Yelp JSON data
     if ([response statusCode] == 200) {
         NSError *jsonParsingError = nil;
-        restaurants = [NSJSONSerialization JSONObjectWithData: data 
+        restaurantList = [NSJSONSerialization JSONObjectWithData: data 
                                                       options: 0 
                                                         error: &jsonParsingError];    
     }
+}
+
+- (int) getRestaurantCount {
+    return [[restaurantList valueForKeyPath: @"businesses"] count];
 }
 
 @end

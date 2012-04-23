@@ -13,13 +13,14 @@
 @interface Restaurants : NSObject {
     NSString* lat;
     NSString* lng;
-    NSDictionary* restaurants;
+    NSDictionary* restaurantList;
 }
 
 @property (strong) NSString* lat;
 @property (strong) NSString* lng;
-@property (strong) NSDictionary* restaurants;
+@property (strong) NSDictionary* restaurantList;
 
 - (id)init: (NSString*) latString: (NSString*) lngString;
+- (int) getRestaurantCount;
 
 @end
