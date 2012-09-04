@@ -103,12 +103,12 @@
 
 - (NSString *)getLatString
 { 
-    return [[NSNumber numberWithDouble:self.locationManager.location.coordinate.latitude] stringValue];
+    return [@(self.locationManager.location.coordinate.latitude) stringValue];
 }
 
 - (NSString *)getLngString
 {   
-    return [[NSNumber numberWithDouble:self.locationManager.location.coordinate.longitude] stringValue];
+    return [@(self.locationManager.location.coordinate.longitude) stringValue];
 }
 
 - (void)loadData
