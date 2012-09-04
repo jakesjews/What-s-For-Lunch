@@ -131,6 +131,24 @@
     [self presentModalViewController:aNavController animated:YES];
 }
 
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner {
+    //If the ad banner was not visible and an ad was loaded then make the banner visible
+    if (!self.adBannerViewIsVisible) {
+        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
+        [UIView commitAnimations];
+        self.adBannerViewIsVisible = YES;
+    }
+}
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
+    //If the ad banner was visible but an ad could not be loaded then make the banner invisible
+    if (self.adBannerViewIsVisible) {
+        [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
+        [UIView commitAnimations];
+        self.adBannerViewIsVisible = NO;
+    }
+}
+
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     [self fillSelectedRestaurant];
 }
@@ -186,6 +204,7 @@
 
 - (void)viewDidLoad
 {
+    adBanner.delegate = self;
     [super viewDidLoad];
     [self startLocationManager];
     
@@ -245,6 +264,12 @@
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
     } else {
+        if (UIInterfaceOrientationIsLandscape(interfaceOrientation))
+            self.adBanner.currentContentSizeIdentifier =
+            ADBannerContentSizeIdentifierLandscape;
+        else
+            self.adBanner.currentContentSizeIdentifier =
+            ADBannerContentSizeIdentifierPortrait;
         return YES;
     }
 }

@@ -11,8 +11,9 @@
 #import "Restaurants.h"
 #import <QuartzCore/QuartzCore.h>
 #import "IASKAppSettingsViewController.h"
+#import <iAd/iAd.h>
 
-@interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, IASKSettingsDelegate>
+@interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, ADBannerViewDelegate, IASKSettingsDelegate>
 {
     CLLocationManager* locationManager;
     Restaurants *restaurants;
@@ -27,16 +28,25 @@
 
     // The view controller for the settings
     IASKAppSettingsViewController *appSettingsViewController;
+    
+    __unsafe_unretained IBOutlet ADBannerView *adBanner;
+    BOOL adBannerViewIsVisible;
    
 }
 
 @property (strong) IASKAppSettingsViewController* appSettingsViewController;
 @property (strong) CLLocationManager* locationManager;
 @property (strong) IBOutlet UIPickerView *restaurantPicker;
+@property (strong) IBOutlet ADBannerView *adBanner;
+@property BOOL adBannerViewIsVisible;
 
 // Selects a random restaurant in the picker
 - (IBAction) btnGetRestaurant:(id)sender;
 // Opens the settings view
 - (IBAction) btnOpenSettings:(id)sender;
+//If the banner loaded an ad make sure it is visible
+- (void) bannerViewDidLoadAd:(ADBannerView *)banner;
+//If the banner failed to load an ad make it invisible
+- (void) bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error;
 
 @end

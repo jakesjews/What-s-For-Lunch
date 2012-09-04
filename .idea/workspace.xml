@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8127f87-8e87-4c57-8c80-a312d0e70a21" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/What's For Lunch.xcodeproj/project.xcworkspace/xcuserdata/jakesjews.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/What's For Lunch.xcodeproj/project.xcworkspace/xcuserdata/jakesjews.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/What's For Lunch.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/What's For Lunch.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/What's For Lunch/AppDelegate.m" afterPath="$PROJECT_DIR$/What's For Lunch/AppDelegate.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/What's For Lunch.xcodeproj/xcuserdata/jacob.xcuserdatad/xcdebugger/Breakpoints.xcbkptlist" afterPath="$PROJECT_DIR$/What's For Lunch.xcodeproj/xcuserdata/jacob.xcuserdatad/xcdebugger/Breakpoints.xcbkptlist" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/What's For Lunch/Restaurants.m" afterPath="$PROJECT_DIR$/What's For Lunch/Restaurants.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/What's For Lunch/Settings.bundle/Root.plist" afterPath="$PROJECT_DIR$/What's For Lunch/Settings.bundle/Root.plist" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/What's For Lunch/ViewController.h" afterPath="$PROJECT_DIR$/What's For Lunch/ViewController.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/What's For Lunch/ViewController.m" afterPath="$PROJECT_DIR$/What's For Lunch/ViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/What's For Lunch/ViewController_iPad.xib" afterPath="$PROJECT_DIR$/What's For Lunch/ViewController_iPad.xib" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/What's For Lunch/ViewController_iPhone.xib" afterPath="$PROJECT_DIR$/What's For Lunch/ViewController_iPhone.xib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/What's For Lunch/What's For Lunch-Info.plist" afterPath="$PROJECT_DIR$/What's For Lunch/What's For Lunch-Info.plist" />
     </list>
     <ignored path="What's For Lunch.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,6 +27,7 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_5.1_2" />
   <component name="FavoritesManager">
     <favorites_list name="What's For Lunch" />
   </component>
@@ -34,28 +36,34 @@
       <file leaf-file-name="AppDelegate.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/What's For Lunch/AppDelegate.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="7" selection-start="1062" selection-end="1062" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#147#170#0" expanded="true" />
-                <element signature="e#229#258#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/What's For Lunch/ViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0">
+            <state line="43" column="72" selection-start="1493" selection-end="1493" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Restaurants.m" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ViewController.m" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/What's For Lunch/ViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="262" column="34" selection-start="8052" selection-end="8052" vertical-scroll-proportion="0.8669623">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewController.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/What's For Lunch/ViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="37" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Restaurants.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/What's For Lunch/Restaurants.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="0" selection-start="2014" selection-end="2014" vertical-scroll-proportion="0.3323077">
+            <state line="127" column="26" selection-start="4192" selection-end="4192" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -63,17 +71,22 @@
       </file>
     </leaf>
   </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/What's For Lunch/ViewController.h" />
-        <option value="$PROJECT_DIR$/What's For Lunch/ViewController.m" />
         <option value="$PROJECT_DIR$/What's For Lunch/Restaurants.m" />
         <option value="$PROJECT_DIR$/What's For Lunch/Settings.bundle/Root.plist" />
         <option value="$PROJECT_DIR$/What's For Lunch/AppDelegate.m" />
+        <option value="$PROJECT_DIR$/What's For Lunch/ViewController.h" />
+        <option value="$PROJECT_DIR$/What's For Lunch/ViewController.m" />
       </list>
     </option>
   </component>
@@ -82,8 +95,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
-    <option name="width" value="1280" />
-    <option name="height" value="702" />
+    <option name="width" value="1440" />
+    <option name="height" value="806" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -133,6 +146,20 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="What's For Lunch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="What's For Lunch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
             </PATH_ELEMENT>
@@ -153,25 +180,20 @@
   </component>
   <component name="PropertiesComponent">
     <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="" />
   </component>
   <component name="RunManager" selected="Application.What's For Lunch">
-    <configuration default="true" type="OCUnitRunConfiguration" factoryName="OCUnit" PROJECT_NAME="What's For Lunch" TARGET_NAME="What's For LunchTests" CONFIG_NAME="Debug" DESTINATION_ID="iphonesimulator_5.1_1" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+    <configuration default="true" type="OCUnitRunConfiguration" factoryName="OCUnit" PROJECT_NAME="What's For Lunch" TARGET_NAME="What's For LunchTests" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE">
       <envs />
-      <method>
-        <option name="com.jetbrains.cidr.execution.BuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-        <option name="com.jetbrains.cidr.execution.StopCurrentSessionBeforeRunTaskProvider$StopCurrentSessionBeforeRunTask" enabled="false" />
-      </method>
+      <method />
     </configuration>
-    <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PROJECT_NAME="What's For Lunch" TARGET_NAME="What's For Lunch" CONFIG_NAME="Debug" DESTINATION_ID="iphonesimulator_5.1_1" RUN_TARGET_PROJECT_NAME="What's For Lunch" RUN_TARGET_NAME="What's For Lunch" DEBUGGER="LLDB" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+    <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PROJECT_NAME="What's For Lunch" TARGET_NAME="What's For Lunch" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="What's For Lunch" RUN_TARGET_NAME="What's For Lunch" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
-      <method>
-        <option name="com.jetbrains.cidr.execution.BuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-        <option name="com.jetbrains.cidr.execution.StopCurrentSessionBeforeRunTaskProvider$StopCurrentSessionBeforeRunTask" enabled="false" />
-      </method>
+      <method />
     </configuration>
-    <configuration default="false" name="What's For Lunch" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="What's For Lunch" PROJECT_NAME="What's For Lunch" TARGET_NAME="What's For Lunch" CONFIG_NAME="Debug" DESTINATION_ID="iphonesimulator_5.1_1" RUN_TARGET_PROJECT_NAME="What's For Lunch" RUN_TARGET_NAME="What's For Lunch" DEBUGGER="LLDB" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+    <configuration default="false" name="What's For Lunch" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="What's For Lunch" PROJECT_NAME="What's For Lunch" TARGET_NAME="What's For Lunch" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="What's For Lunch" RUN_TARGET_NAME="What's For Lunch" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
       <RunnerSettings RunnerId="AppRunner" />
       <ConfigurationWrapper RunnerId="AppRunner" />
@@ -182,7 +204,7 @@
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false">
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
     <option name="mySSHConnectionTimeout" value="30000" />
@@ -197,6 +219,7 @@
     <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
     <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
     <configuration useDefault="false">$USER_HOME$/.subversion_IDEA</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
@@ -222,26 +245,26 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="702" extended-state="0" />
+    <frame x="0" y="22" width="1440" height="806" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286517" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2585521" sideWeight="0.6003289" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39967105" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18842626" sideWeight="0.67134833" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3988764" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3988764" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286517" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -266,7 +289,6 @@
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
     <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
-    <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
@@ -276,9 +298,10 @@
     <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
     <option name="LAST_COMMIT_MESSAGE" value="Added message.ui framework for InAppSettingsKit" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -297,12 +320,62 @@
     <MESSAGE value="Added message.ui framework for InAppSettingsKit" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="OCExceptionBreakpointType">
+          <properties />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="45" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/What's For Lunch/Restaurants.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="26" selection-start="4192" selection-end="4192" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/What's For Lunch/ViewController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="37" selection-start="667" selection-end="667" vertical-scroll-proportion="0.4084507">
+        <state line="26" column="37" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/What's For Lunch/ViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="64" selection-start="3092" selection-end="3092" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/What's For Lunch/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="72" selection-start="1493" selection-end="1493" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/What's For Lunch/Restaurants.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="0" selection-start="2003" selection-end="2003" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/What's For Lunch/ViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/What's For Lunch/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="7" selection-start="1099" selection-end="1099" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -328,24 +401,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/What's For Lunch/AppDelegate.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="7" selection-start="1062" selection-end="1062" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#147#170#0" expanded="true" />
-            <element signature="e#229#258#0" expanded="true" />
-          </folding>
+        <state line="43" column="72" selection-start="1493" selection-end="1493" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/What's For Lunch/ViewController.m">
+    <entry file="file://$PROJECT_DIR$/What's For Lunch/ViewController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0">
+        <state line="26" column="37" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/What's For Lunch/Restaurants.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="0" selection-start="2014" selection-end="2014" vertical-scroll-proportion="0.3323077">
+        <state line="127" column="26" selection-start="4192" selection-end="4192" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/What's For Lunch/ViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="262" column="34" selection-start="8052" selection-end="8052" vertical-scroll-proportion="0.8669623">
           <folding />
         </state>
       </provider>

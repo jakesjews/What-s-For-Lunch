@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60354A3CD3BE36265DD3F03E /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60354A49AD11CB05D32A7547 /* iAd.framework */; };
 		B34EF3F81544DB4600E53E0E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B34EF3F71544DB4600E53E0E /* MessageUI.framework */; };
 		B3716BB214FB36A300005AA2 /* NSMutableURLRequest+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = B3716B8E14FB36A300005AA2 /* NSMutableURLRequest+Parameters.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B3716BB314FB36A300005AA2 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = B3716B9014FB36A300005AA2 /* NSString+URLEncoding.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -80,6 +81,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		60354A49AD11CB05D32A7547 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		B34EF3F71544DB4600E53E0E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		B3716B8D14FB36A300005AA2 /* NSMutableURLRequest+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Parameters.h"; sourceTree = "<group>"; };
 		B3716B8E14FB36A300005AA2 /* NSMutableURLRequest+Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+Parameters.m"; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				B382F8AF14FB0BEC00B5E55A /* UIKit.framework in Frameworks */,
 				B382F8B114FB0BEC00B5E55A /* Foundation.framework in Frameworks */,
 				B382F8B314FB0BEC00B5E55A /* CoreGraphics.framework in Frameworks */,
+				60354A3CD3BE36265DD3F03E /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +308,7 @@
 		B382F8AD14FB0BEC00B5E55A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				60354A49AD11CB05D32A7547 /* iAd.framework */,
 				B34EF3F71544DB4600E53E0E /* MessageUI.framework */,
 				B382FA8414FB0EC300B5E55A /* CoreLocation.framework */,
 				B382F8AE14FB0BEC00B5E55A /* UIKit.framework */,
@@ -706,7 +710,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "What's For Lunch/What's For Lunch-Prefix.pch";
 				INFOPLIST_FILE = "What's For Lunch/What's For Lunch-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -727,7 +731,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "What's For Lunch/What's For Lunch-Prefix.pch";
 				INFOPLIST_FILE = "What's For Lunch/What's For Lunch-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
