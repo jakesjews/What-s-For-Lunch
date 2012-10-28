@@ -14,7 +14,7 @@
     // Fills in the details for the restaurant selected in the picker
     - (void) fillSelectedRestaurant;
 
-    // Starts the location manager with an accuracy of 1 kilometer
+    // Starts the location manager with the best possible accuracy
     - (void) startLocationManager;
 
     // Whether the app is running in an iPad or not
