@@ -83,7 +83,7 @@ static NSString* const TOKEN_SECRET = @"jqXa9QivTJF1qCoTZ8RpfwpCvhs";
 
     for(int i = [foodTypes count] - 1; i >= 0; i--) {
         
-        if (!([[NSUserDefaults standardUserDefaults] boolForKey: [foodTypes objectAtIndex: i]]))
+        if (!([[NSUserDefaults standardUserDefaults] boolForKey: foodTypes[i]]))
         {
             [foodTypes removeObjectAtIndex: i];
         }

@@ -15,26 +15,17 @@
 
 @interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, ADBannerViewDelegate, IASKSettingsDelegate>
 {
-    CLLocationManager* locationManager;
     Restaurants *restaurants;
 
     // iPhone
-    UIPickerView *restaurantPicker;
     IBOutlet UITextView *lblAddress;
     IBOutlet UITextView *lblUrl;
 
     // iPad
     IBOutlet UIWebView *wvRestaurant;
-
-    // The view controller for the settings
-    IASKAppSettingsViewController *appSettingsViewController;
-    
-    __unsafe_unretained IBOutlet ADBannerView *adBanner;
-    BOOL adBannerViewIsVisible;
-   
 }
 
-@property (strong) IASKAppSettingsViewController* appSettingsViewController;
+@property (nonatomic) IASKAppSettingsViewController* appSettingsViewController;
 @property (strong) CLLocationManager* locationManager;
 @property (strong) IBOutlet UIPickerView *restaurantPicker;
 @property (strong) IBOutlet ADBannerView *adBanner;

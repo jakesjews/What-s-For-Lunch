@@ -26,7 +26,7 @@
     // Converts the current latitude to a string for the Yelp api request
     - (NSString*) getLatString;
 
-    // Converts the current longitude to a string for the Yelp api request    
+    // Converts the current longitude to a string for the Yelp api request
     - (NSString*) getLngString;
 
     // Loads a Restaurants object using the current latitude and longitude
@@ -36,7 +36,6 @@
 
 @implementation ViewController
 
-@synthesize locationManager, restaurantPicker, appSettingsViewController;
 
 - (Boolean) isIpad
 {
@@ -46,7 +45,7 @@
 - (void)startLocationManager
 {
     self.locationManager = [CLLocationManager new];
-    self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [self.locationManager startUpdatingLocation];
 }
 
@@ -60,8 +59,8 @@
         int rand = arc4random() % [restaurants getRestaurantCount];
         
         // Select the restaurant index matching the previously created random number
-        [restaurantPicker selectRow:rand inComponent:0 animated:YES];
-        [restaurantPicker reloadComponent:0];
+        [_restaurantPicker selectRow:rand inComponent:0 animated:YES];
+        [_restaurantPicker reloadComponent:0];
     }
     
     [self fillSelectedRestaurant];
@@ -72,8 +71,8 @@
     if ([restaurants getRestaurantCount] > 0) {
         
         // Get a reference to the selected restaurant
-        NSInteger row = [restaurantPicker selectedRowInComponent:0];
-        id restaurant = [[[restaurants restaurantList] valueForKeyPath: @"businesses"] objectAtIndex:row];
+        NSInteger row = [_restaurantPicker selectedRowInComponent:0];
+        id restaurant = [[restaurants restaurantList] valueForKeyPath: @"businesses"][row];
         
         // Get the url for the restaurant that was returned by the Yelp API
         NSString* urlString = [restaurant valueForKeyPath: @"url"];
@@ -115,7 +114,7 @@
 {
     // Create a restaurants object with the string values of the current latitude and longitude
     restaurants = [[Restaurants alloc] init: [self getLatString]: [self getLngString]];
-    [restaurantPicker reloadAllComponents];
+    [_restaurantPicker reloadAllComponents];
     
 }
 
@@ -167,12 +166,12 @@
 
 #pragma mark - InAppSettingsKit
 
-- (IASKAppSettingsViewController*)appSettingsViewController {
-    if (!appSettingsViewController) {
-        appSettingsViewController = [[IASKAppSettingsViewController alloc] initWithNibName:@"IASKAppSettingsView" bundle:nil];
-        appSettingsViewController.delegate = self;
+- (IASKAppSettingsViewController*) appSettingsViewController {
+    if (!_appSettingsViewController) {
+        _appSettingsViewController = [[IASKAppSettingsViewController alloc] initWithNibName:@"IASKAppSettingsView" bundle:nil];
+        _appSettingsViewController.delegate = self;
     }
-    return appSettingsViewController;
+    return _appSettingsViewController;
 }
 
 #pragma mark - PickerView
@@ -186,7 +185,7 @@
 }
 
 - (NSString *)pickerView:(UIPickerView *)thePickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return [[[restaurants restaurantList] valueForKeyPath: @"businesses.name"] objectAtIndex:row];
+    return [[restaurants restaurantList] valueForKeyPath: @"businesses.name"][row];
 }
 
 #pragma mark - View lifecycle
@@ -204,7 +203,7 @@
 
 - (void)viewDidLoad
 {
-    adBanner.delegate = self;
+    _adBanner.delegate = self;
     [super viewDidLoad];
     [self startLocationManager];
     
@@ -225,7 +224,7 @@
 
 - (void)viewDidUnload
 {
-    restaurantPicker = nil;
+    _restaurantPicker = nil;
     lblAddress = nil;
     lblUrl = nil;
     wvRestaurant = nil;
