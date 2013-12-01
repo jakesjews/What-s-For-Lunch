@@ -42,7 +42,7 @@ static NSString* const TOKEN_SECRET = @"jqXa9QivTJF1qCoTZ8RpfwpCvhs";
  Creates the restaurants object and retrieves all restaurants within 25 miles of
  the input latitude and longitude
  */
-- (id)init: (NSString*) latString: (NSString*) lngString
+- (id)init: (NSString*) latString :(NSString*) lngString
 {
     self = [super init];
     
