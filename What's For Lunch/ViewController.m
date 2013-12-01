@@ -103,6 +103,13 @@
     [[UIApplication sharedApplication] openURL:url];
 }
 
+- (IBAction)inAppClicked:(id)sender {
+    SKProductsRequest *request= [[SKProductsRequest alloc]
+                                 initWithProductIdentifiers: [NSSet setWithObject: @"whatsforlunch-noads"]];
+    request.delegate = self;
+    [request start];
+}
+
 - (IBAction)btnGetRestaurant:(id)sender {
     [self displayRandomRestaurant];
 }
@@ -153,6 +160,60 @@
     return _appSettingsViewController;
 }
 
+#pragma mark - In App Purchase
+
+- (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response {
+    [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
+    
+    NSArray *myProduct = response.products;
+    
+    //Since only one product, we do not need to choose from the array. Proceed directly to payment.
+    SKPayment *newPayment = [SKPayment paymentWithProduct:[myProduct objectAtIndex:0]];
+    [[SKPaymentQueue defaultQueue] addPayment:newPayment];
+}
+
+- (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions {
+    for (SKPaymentTransaction *transaction in transactions) {
+        switch (transaction.transactionState) {
+            case SKPaymentTransactionStatePurchased:
+                [self completeTransaction:transaction];
+                break;
+            case SKPaymentTransactionStateFailed:
+                [self failedTransaction:transaction];
+                break;
+            case SKPaymentTransactionStateRestored:
+                [self restoreTransaction:transaction];
+            default:
+                break;
+        }
+    }
+}
+
+- (void) completeTransaction: (SKPaymentTransaction *)transaction {
+    [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
+}
+
+- (void) restoreTransaction: (SKPaymentTransaction *)transaction {
+    [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
+}
+
+- (void) failedTransaction: (SKPaymentTransaction *)transaction {
+    
+    if (transaction.error.code != SKErrorPaymentCancelled)
+    {
+        // Display an error here.
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Purchase Unsuccessful"
+                                                        message:@"Your purchase failed. Please try again."
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+    
+    // Finally, remove the transaction from the payment queue.
+    [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
+}
+
 #pragma mark - PickerView
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)thePickerView {
@@ -197,7 +258,6 @@
 - (void)viewDidUnload
 {
     _restaurantPicker = nil;
-    wvRestaurant = nil;
     [super viewDidUnload];
 }
 

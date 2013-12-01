@@ -13,13 +13,11 @@
 #import "IASKAppSettingsViewController.h"
 #import <iAd/iAd.h>
 #import <MapKit/MapKit.h>
+#import <StoreKit/StoreKit.h>
 
-@interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, ADBannerViewDelegate, IASKSettingsDelegate>
+@interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, ADBannerViewDelegate, IASKSettingsDelegate, SKProductsRequestDelegate, SKPaymentTransactionObserver>
 {
     Restaurants *restaurants;
-
-    // iPad
-    IBOutlet UIWebView *wvRestaurant;
 }
 
 @property (nonatomic) IASKAppSettingsViewController* appSettingsViewController;
@@ -29,8 +27,8 @@
 @property BOOL adBannerViewIsVisible;
 
 - (IBAction)directionsClicked:(id)sender;
-
 - (IBAction)websiteClicked:(id)sender;
+- (IBAction)inAppClicked:(id)sender;
 
 // Selects a random restaurant in the picker
 - (IBAction) btnGetRestaurant:(id)sender;
@@ -40,5 +38,9 @@
 - (void) bannerViewDidLoadAd:(ADBannerView *)banner;
 //If the banner failed to load an ad make it invisible
 - (void) bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error;
+
+- (void) completeTransaction: (SKPaymentTransaction *)transaction;
+- (void) restoreTransaction: (SKPaymentTransaction *)transaction;
+- (void) failedTransaction: (SKPaymentTransaction *)transaction;
 
 @end
