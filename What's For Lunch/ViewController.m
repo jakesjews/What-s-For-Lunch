@@ -10,8 +10,15 @@
 
 // Declare private methods
 @interface ViewController (PrivateMethods)
+
+    // Fills in the details for the restaurant selected in the picker
+    - (void) fillSelectedRestaurant;
+
     // Starts the location manager with the best possible accuracy
     - (void) startLocationManager;
+
+    // Whether the app is running in an iPad or not
+    - (Boolean) isIpad;
 
     // Selects a random restaurant in the picker
     - (void) displayRandomRestaurant;
@@ -26,20 +33,27 @@
     - (void)loadData;
 
     - (id)getSelectedRestaurant;
-
     - (NSURL*)getSelectedUrl;
+
 
 @end
 
 @implementation ViewController
 
-- (void)startLocationManager {
+- (Boolean) isIpad
+{
+    return (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad);
+}
+
+- (void)startLocationManager
+{
     self.locationManager = [CLLocationManager new];
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [self.locationManager startUpdatingLocation];
 }
 
-- (void)displayRandomRestaurant {
+- (void)displayRandomRestaurant
+{
     // If more than one restaurant was returned by yelp then select a random restaurant in the picker
     if ([restaurants getRestaurantCount] > 0) {
         
@@ -51,6 +65,8 @@
         [_restaurantPicker selectRow:rand inComponent:0 animated:YES];
         [_restaurantPicker reloadComponent:0];
     }
+    
+    [self fillSelectedRestaurant];
 }
 
 - (id)getSelectedRestaurant {
@@ -70,6 +86,16 @@
 - (NSString*)getSelectedAddress {
     id restaurant = [self getSelectedRestaurant];
     return [[restaurant valueForKeyPath: @"location.display_address"] componentsJoinedByString: @" "];
+}
+
+- (void)fillSelectedRestaurant {
+    // If the device is an iPad navigate the web view to the restaurant's Yelp URL
+    if ([restaurants getRestaurantCount] > 0 && [self isIpad]) {
+            
+        NSURLRequest *requestObj = [NSURLRequest requestWithURL: [self getSelectedUrl]];
+        
+        [wvRestaurant loadRequest:requestObj];
+    }
 }
 
 - (NSString*)getLatString {
@@ -136,6 +162,10 @@
         [UIView commitAnimations];
         self.adBannerViewIsVisible = NO;
     }
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    [self fillSelectedRestaurant];
 }
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {

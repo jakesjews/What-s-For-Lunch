@@ -45,6 +45,7 @@
 		B382F8EF14FB0C9A00B5E55A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B382F8EA14FB0C9A00B5E55A /* AppDelegate.m */; };
 		B382F8F014FB0C9A00B5E55A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B382F8EC14FB0C9A00B5E55A /* ViewController.m */; };
 		B382F8F114FB0C9A00B5E55A /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B382F8ED14FB0C9A00B5E55A /* ViewController_iPhone.xib */; };
+		B382F8F214FB0C9A00B5E55A /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B382F8EE14FB0C9A00B5E55A /* ViewController_iPad.xib */; };
 		B382FA8114FB0E2600B5E55A /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = B382FA7E14FB0E2600B5E55A /* Icon-72.png */; };
 		B382FA8214FB0E2600B5E55A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B382FA7F14FB0E2600B5E55A /* Icon@2x.png */; };
 		B382FA8314FB0E2600B5E55A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B382FA8014FB0E2600B5E55A /* Icon.png */; };
@@ -149,6 +150,7 @@
 		B382F8EB14FB0C9A00B5E55A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B382F8EC14FB0C9A00B5E55A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B382F8ED14FB0C9A00B5E55A /* ViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController_iPhone.xib; sourceTree = "<group>"; };
+		B382F8EE14FB0C9A00B5E55A /* ViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController_iPad.xib; sourceTree = "<group>"; };
 		B382FA7E14FB0E2600B5E55A /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		B382FA7F14FB0E2600B5E55A /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		B382FA8014FB0E2600B5E55A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 				B382F8EB14FB0C9A00B5E55A /* ViewController.h */,
 				B382F8EC14FB0C9A00B5E55A /* ViewController.m */,
 				B382F8ED14FB0C9A00B5E55A /* ViewController_iPhone.xib */,
+				B382F8EE14FB0C9A00B5E55A /* ViewController_iPad.xib */,
 				B382F8E614FB0C1700B5E55A /* Restaurants.h */,
 				B382F8E714FB0C1700B5E55A /* Restaurants.m */,
 				16AB6E68184BE64400458A68 /* Images.xcassets */,
@@ -535,6 +538,7 @@
 				B382F8B914FB0BEC00B5E55A /* InfoPlist.strings in Resources */,
 				16AB6E69184BE64400458A68 /* Images.xcassets in Resources */,
 				B382F8F114FB0C9A00B5E55A /* ViewController_iPhone.xib in Resources */,
+				B382F8F214FB0C9A00B5E55A /* ViewController_iPad.xib in Resources */,
 				B382FA8114FB0E2600B5E55A /* Icon-72.png in Resources */,
 				B382FA8214FB0E2600B5E55A /* Icon@2x.png in Resources */,
 				B382FA8314FB0E2600B5E55A /* Icon.png in Resources */,
@@ -729,7 +733,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -750,7 +754,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
