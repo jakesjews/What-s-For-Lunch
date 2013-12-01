@@ -32,10 +32,13 @@
     // Loads a Restaurants object using the current latitude and longitude
     - (void)loadData;
 
+    - (id)getSelectedRestaurant;
+    - (NSURL*)getSelectedUrl;
+
+
 @end
 
 @implementation ViewController
-
 
 - (Boolean) isIpad
 {
@@ -66,52 +69,44 @@
     [self fillSelectedRestaurant];
 }
 
-- (void)fillSelectedRestaurant
-{
-    if ([restaurants getRestaurantCount] > 0) {
+- (id)getSelectedRestaurant {
+    // Get a reference to the selected restaurant
+    NSInteger row = [_restaurantPicker selectedRowInComponent:0];
+    return [[restaurants restaurantList] valueForKeyPath: @"businesses"][row];
+}
+
+- (NSURL*)getSelectedUrl {
+    id restaurant = [self getSelectedRestaurant];
+    
+    NSString* urlString = [restaurant valueForKeyPath: @"url"];
+    
+    return [NSURL URLWithString: urlString];
+}
+
+- (NSString*)getSelectedAddress {
+    id restaurant = [self getSelectedRestaurant];
+    return [[restaurant valueForKeyPath: @"location.display_address"] componentsJoinedByString: @" "];
+}
+
+- (void)fillSelectedRestaurant {
+    // If the device is an iPad navigate the web view to the restaurant's Yelp URL
+    if ([restaurants getRestaurantCount] > 0 && [self isIpad]) {
+            
+        NSURLRequest *requestObj = [NSURLRequest requestWithURL: [self getSelectedUrl]];
         
-        // Get a reference to the selected restaurant
-        NSInteger row = [_restaurantPicker selectedRowInComponent:0];
-        id restaurant = [[restaurants restaurantList] valueForKeyPath: @"businesses"][row];
-        
-        // Get the url for the restaurant that was returned by the Yelp API
-        NSString* urlString = [restaurant valueForKeyPath: @"url"];
-        
-        // If the device is an iPad navigate the web view to the restaurant's Yelp URL
-        if ([self isIpad]) {
-            
-            NSURLRequest *requestObj = [NSURLRequest requestWithURL:
-                                        [NSURL URLWithString: urlString]];
-            [wvRestaurant loadRequest:requestObj];
-            
-        // If the device is an iphone fill in the web site text area with the Yelp URL and fill in the 
-        // address text area with the restaurant's address
-        } else {
-            
-            NSString* address = [[restaurant valueForKeyPath: @"location.display_address"] componentsJoinedByString: @" "];
-            
-            [lblAddress setText: address];
-            lblAddress.dataDetectorTypes = UIDataDetectorTypeAddress;
-            [lblUrl setText: urlString];
-        }
-    } else {
-        [lblAddress setText: @""];
-        [lblUrl setText: @""];
+        [wvRestaurant loadRequest:requestObj];
     }
 }
 
-- (NSString *)getLatString
-{ 
+- (NSString*)getLatString {
     return [@(self.locationManager.location.coordinate.latitude) stringValue];
 }
 
-- (NSString *)getLngString
-{   
+- (NSString*)getLngString {
     return [@(self.locationManager.location.coordinate.longitude) stringValue];
 }
 
-- (void)loadData
-{
+- (void)loadData {
     // Create a restaurants object with the string values of the current latitude and longitude
     restaurants = [[Restaurants alloc] init: [self getLatString]: [self getLngString]];
     [_restaurantPicker reloadAllComponents];
@@ -120,6 +115,20 @@
 
 #pragma mark - Events
 
+- (IBAction)directionsClicked:(id)sender {
+    NSString* address = [self getSelectedAddress];
+    NSString* urlString = [NSString stringWithFormat: @"http://maps.apple.com/?q=%@", address];
+    NSString *escapedString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSURL* url = [NSURL URLWithString: escapedString];
+    
+    [[UIApplication sharedApplication] openURL:url];
+}
+
+- (IBAction)websiteClicked:(id)sender {
+    NSURL* url = [self getSelectedUrl];
+    [[UIApplication sharedApplication] openURL:url];
+}
+
 - (IBAction)btnGetRestaurant:(id)sender {
     [self displayRandomRestaurant];
 }
@@ -127,7 +136,7 @@
 - (IBAction)btnOpenSettings:(id)sender {
     UINavigationController *aNavController = [[UINavigationController alloc] initWithRootViewController: self.appSettingsViewController];
     self.appSettingsViewController.showDoneButton = YES;
-    [self presentModalViewController:aNavController animated:YES];
+    [self presentViewController:aNavController animated:YES completion:nil];
 }
 
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner {
@@ -158,7 +167,7 @@
 
 - (void)settingsViewControllerDidEnd:(IASKAppSettingsViewController *)sender {
 
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 
     [self loadData];
     [self displayRandomRestaurant];
@@ -207,13 +216,6 @@
     [super viewDidLoad];
     [self startLocationManager];
     
-    // Add snazzy rounded corners to the iPhone text areas
-    if ( ![self isIpad] ) 
-    {
-        lblAddress.layer.cornerRadius = 10;
-        lblUrl.layer.cornerRadius = 10;
-    }
-    
     // Add a notification for when the app is loaded from the background
     [[NSNotificationCenter defaultCenter] addObserver:self 
                                           selector:@selector(becomeActive:)
@@ -225,8 +227,6 @@
 - (void)viewDidUnload
 {
     _restaurantPicker = nil;
-    lblAddress = nil;
-    lblUrl = nil;
     wvRestaurant = nil;
     [super viewDidUnload];
 }

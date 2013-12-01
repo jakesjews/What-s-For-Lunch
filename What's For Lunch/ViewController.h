@@ -12,14 +12,11 @@
 #import <QuartzCore/QuartzCore.h>
 #import "IASKAppSettingsViewController.h"
 #import <iAd/iAd.h>
+#import <MapKit/MapKit.h>
 
 @interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, ADBannerViewDelegate, IASKSettingsDelegate>
 {
     Restaurants *restaurants;
-
-    // iPhone
-    IBOutlet UITextView *lblAddress;
-    IBOutlet UITextView *lblUrl;
 
     // iPad
     IBOutlet UIWebView *wvRestaurant;
@@ -30,6 +27,10 @@
 @property (strong) IBOutlet UIPickerView *restaurantPicker;
 @property (strong) IBOutlet ADBannerView *adBanner;
 @property BOOL adBannerViewIsVisible;
+
+- (IBAction)directionsClicked:(id)sender;
+
+- (IBAction)websiteClicked:(id)sender;
 
 // Selects a random restaurant in the picker
 - (IBAction) btnGetRestaurant:(id)sender;
