@@ -18,6 +18,9 @@
 @interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, ADBannerViewDelegate, IASKSettingsDelegate, SKProductsRequestDelegate, SKPaymentTransactionObserver>
 {
     Restaurants *restaurants;
+    
+    // iPad
+    IBOutlet UIWebView *wvRestaurant;
 }
 
 @property (nonatomic) IASKAppSettingsViewController* appSettingsViewController;
