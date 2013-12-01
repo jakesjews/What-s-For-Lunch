@@ -24,6 +24,7 @@
 @property (strong) CLLocationManager* locationManager;
 @property (strong) IBOutlet UIPickerView *restaurantPicker;
 @property (strong) IBOutlet ADBannerView *adBanner;
+@property (weak, nonatomic) IBOutlet UIButton *removeAdsButton;
 @property BOOL adBannerViewIsVisible;
 
 - (IBAction)directionsClicked:(id)sender;

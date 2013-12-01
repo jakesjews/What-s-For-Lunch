@@ -105,7 +105,7 @@
 
 - (IBAction)inAppClicked:(id)sender {
     SKProductsRequest *request= [[SKProductsRequest alloc]
-                                 initWithProductIdentifiers: [NSSet setWithObject: @"whatsforlunch-noads"]];
+                                 initWithProductIdentifiers: [NSSet setWithObject: @"whatsforlunchnoads"]];
     request.delegate = self;
     [request start];
 }
@@ -162,6 +162,8 @@
 
 #pragma mark - In App Purchase
 
+#define adKey @"noads"
+
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response {
     [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
     
@@ -189,11 +191,23 @@
     }
 }
 
+- (BOOL)areAdsHidden {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:adKey ];
+}
+
+- (void)removeAds {
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:adKey ];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [self setAdsVisiblity];
+}
+
 - (void) completeTransaction: (SKPaymentTransaction *)transaction {
+    [self removeAds];
     [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
 }
 
 - (void) restoreTransaction: (SKPaymentTransaction *)transaction {
+    [self removeAds];
     [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
 }
 
@@ -214,6 +228,13 @@
     [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
 }
 
+- (void) setAdsVisiblity {
+    BOOL adsHidden = [self areAdsHidden];
+    
+    [self.removeAdsButton setHidden:adsHidden];
+    [self.adBanner setHidden:adsHidden];
+}
+
 #pragma mark - PickerView
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)thePickerView {
@@ -232,6 +253,7 @@
 
 - (void)becomeActive:(NSNotification *)notification
 {
+    [self setAdsVisiblity];
     [self loadData];
     [self displayRandomRestaurant];
 }
