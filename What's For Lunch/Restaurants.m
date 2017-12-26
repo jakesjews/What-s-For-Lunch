@@ -69,7 +69,7 @@ static NSString* const TOKEN_SECRET = @"jqXa9QivTJF1qCoTZ8RpfwpCvhs";
 {
     long distance = [[NSUserDefaults standardUserDefaults] integerForKey: @"distance_pref"];
 
-    return [NSString stringWithFormat: @"%i", distance];
+    return [NSString stringWithFormat: @"%li", distance];
 }
 
 - (NSString*) getCategoryList
