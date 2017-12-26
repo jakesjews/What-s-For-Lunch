@@ -67,7 +67,7 @@ static NSString* const TOKEN_SECRET = @"jqXa9QivTJF1qCoTZ8RpfwpCvhs";
 
 - (NSString*) getRadiusFilter
 {
-    int distance = [[NSUserDefaults standardUserDefaults] integerForKey: @"distance_pref"];
+    long distance = [[NSUserDefaults standardUserDefaults] integerForKey: @"distance_pref"];
 
     return [NSString stringWithFormat: @"%i", distance];
 }
@@ -81,7 +81,7 @@ static NSString* const TOKEN_SECRET = @"jqXa9QivTJF1qCoTZ8RpfwpCvhs";
                           @"mideastern", @"vegan", @"tradamerican",
                           @"delis", @"bars", nil];
 
-    for(int i = [foodTypes count] - 1; i >= 0; i--) {
+    for(long i = [foodTypes count] - 1; i >= 0; i--) {
         
         if (!([[NSUserDefaults standardUserDefaults] boolForKey: foodTypes[i]]))
         {
@@ -131,7 +131,7 @@ static NSString* const TOKEN_SECRET = @"jqXa9QivTJF1qCoTZ8RpfwpCvhs";
     }
 }
 
-- (int) getRestaurantCount {
+- (long) getRestaurantCount {
     return [[restaurantList valueForKeyPath: @"businesses"] count];
 }
 

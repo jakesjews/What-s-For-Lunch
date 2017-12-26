@@ -21,6 +21,6 @@
 @property (strong) NSDictionary* restaurantList;
 
 - (id)init: (NSString*) latString :(NSString*) lngString;
-- (int) getRestaurantCount;
+- (long) getRestaurantCount;
 
 @end

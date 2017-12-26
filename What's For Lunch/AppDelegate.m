@@ -27,7 +27,7 @@
     }
 
     // Check if preferences have been set, if they haven't load defaults from settings.bundle
-    int distance = [[NSUserDefaults standardUserDefaults] integerForKey:@"distance"];
+    long distance = [[NSUserDefaults standardUserDefaults] integerForKey:@"distance"];
 
     if(distance == 0) {
         [self registerDefaultsFromSettingsBundle];
